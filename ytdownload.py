@@ -15,7 +15,7 @@ def download():
     url=YouTube(str(link.get()))
     url.streams.order_by('resolution')
     video=url.streams.get_highest_resolution()
-    video.download("C:\\Users\\karan\\Downloads")
+    video.download()
     Label(gui,text="Downloaded", font='arial 20 bold').place(x=260,y=320)
 
 Button(gui,text="Download",font='arial 20 bold',bg='green',padx=2, command=download).place(x=260,y=260)
